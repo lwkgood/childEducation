@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .huihua{
+    width:428px;
+    height:240px;
+    background:#f2f7fd;
+    float:left;
+    border-top-left-radius:25px;
+    border-top-right-radius:25px;
+}
+.hhyx,.huihua{
+    height: 35px;
+    border-bottom: 1px solid palegreen;
+    line-height: 35px;
+    background-color:lightgray;
+}
+.huihu .huih{
+    float: left;
+    height: 35px;
+    line-height: 35px;
+    display: block;
+    padding-left:16px;
+    font-size: 13px;
+}
+.hhyx .hui{
+    float:right;
+    height: 35px;
+    line-height: 35px;
+    padding-right: 16px;
+    font-size: 13px;
+}
+
+.youx{
+    width:428px;
+    height:240px;
+    background:#f2f7fd;
+    float:left;
+    border-top-right-radius:25px;
+    border-top-left-radius:25px;
+}
+.youxi,.youx{
+    height: 35px;
+    border-bottom: 1px solid palegreen;
+    line-height: 35px;
+    background-color:lightgray;
+}
+.youx .yo{
+    float: left;
+    height: 35px;
+    line-height: 35px;
+    display: block;
+    padding-left:16px;
+    font-size: 13px;
+}
+.youxi .yoo{
+    float:right;
+    height: 35px;
+    line-height: 35px;
+    padding-right: 16px;
+    font-size: 13px;
+}
+
+
+.youxi .youx #fruit{
+        width:190px;
+        height: 100px;
+        float: left;
+        background-color:#f0edca;
+     }
+#vegetables{
+         width: 188px;
+         height: 100px;
+         float: left;
+         background-color:#b8eeee;
+         margin-left: 50px;
+     }
+
+    </style>
+</head>
+<body>
+            <div class="hhyx">
+                <div class="huihua">
+                    <div class="huihu">
+                        <div class="huih">绘画天地</div>
+                        <div class="hui">更多>></div>
+                    </div>
+                    <div style="float:left;">
+                        <canvas id="myCanvas" height=240 width=426
+                            style="border: rgb(143, 197, 233) solid 1px">你的浏览器不支持canvas。</canvas>
+                        <output id="showLineWidth">1</output>
+                        <br />
+                        <input type="range" id="lineWidth" min="1" max="50" step="1" value="1" onChange="doChangeRange()" />
+                        <input type="color" id="lineColor" onChange="doChangeColor()" />
+                        橡皮擦 :<img src="image/eraser.png" width="25" height="29" type="button" id="x" onclick="p()" />
+                    </div>
+                </div>
+                <div class="youxi">
+                    <div class="youx">
+                        <div class="you">
+                            <div class="yo">游戏乐园</div>
+                            <div class="yoo">更多>></div>
+                        </div>
+                        <div style="float:left;">
+                            <div id="fruit" ondrop="drop1(event)" ondragover="allowDrop(event)"></div>
+                            <div id="vegetables" ondrop="drop2(event)" ondragover="allowDrop(event)"></div>
+                            <div
+                                style="border:1px solid rgb(143, 197, 233);width:426px;height:130px;float:left;clear:both;margin-top:10px;">
+                                <img src="image\11.png" style="width:60px;height:60px;" id="fruit1" draggable="ture"
+                                    ondragstart="drag(event)">
+                                <img src="image\22.png" style="width:60px;height:60px;" id="vegetables1" draggable="ture"
+                                    ondragstart="drag(event)">
+                                <img src="image\33.png" style="width:60px;height:60px;" id="vegetables2" draggable="ture"
+                                    ondragstart="drag(event)">
+                                <img src="image\44.png" style="width:60px;height:60px;" id="fruit2" draggable="ture"
+                                    ondragstart="drag(event)">
+                                <img src="image\55.png" style="width:60px;height:60px;" id="vegetables3" draggable="ture"
+                                    ondragstart="drag(event)">
+                                <img src="image\66.png" style="width:60px;height:60px;" id="fruit3" draggable="ture"
+                                    ondragstart="drag(event)">
+                                <img src="image\77.png" style="width:60px;height:60px;" id="vegetables4" draggable="ture"
+                                    ondragstart="drag(event)">
+                                <img src="image\88.png" style="width:60px;height:60px;" id="fruit4" draggable="ture"
+                                    ondragstart="drag(event)">
+                            </div>
+                            <br />
+                            <p>游戏规则：</p>
+                            <p>&nbsp;&nbsp;请把上面图片中属于水果拖到左边浅黄色框内，把属于蔬菜拖到右边绿色框内</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="height:300px;width:100px;"></div>
+</body>
+</html>

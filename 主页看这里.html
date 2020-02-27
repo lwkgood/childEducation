@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="E:\H5\1740624216罗文科\导航栏.css">
+    <script type="text/javascript">
+        var c;
+        var ctx;
+        var started;
+        window.addEventListener("load", init, true);
+        function init() {
+            c = document.getElementById("myCanvas");
+            ctx = c.getContext("2d");
+            c.addEventListener("mousedown", doMouseDown, false);
+            c.addEventListener("mousemove", doMouseMove, false);
+            c.addEventListener("mouseup", doMouseUp, false);
+        }
+        function doMouseDown(event) {
+            var mouseX = event.pageX - this.offsetLeft;
+            var mouseY = event.pageY - this.offsetTop;
+            ctx.beginPath();
+            ctx.moveTo(mouseX, mouseY);
+            started = true;
+        }
+        function doMouseMove(event) {
+            if (started) {
+                var mouseX = event.pageX - this.offsetLeft;
+                var mouseY = event.pageY - this.offsetTop;
+                ctx.lineTo(mouseX, mouseY);
+                ctx.stroke();
+            }
+        }
+        function doMouseUp(event) {
+            started = false;
+        }
+        function doChangeRange() {
+            ctx.lineWidth = document.getElementById("lineWidth").value;
+            document.getElementById("showLineWidth").value = ctx.lineWidth;
+        }
+        function doChangeColor() {
+            ctx.globalCompositeOperation = "source-over";
+            ctx.strokeStyle = document.getElementById("lineColor").value;
+        }
+        function p() {
+            ctx.globalCompositeOperation = "destination-out";
+            document.getElementById("x").value = ctx.lineWidth;
+        }
+
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+        function drop1(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            if (data.indexOf("fruit") >= 0)
+                document.getElementById("fruit").appendChild(document.getElementById(data));
+            else
+                alert("不是水果");
+        }
+        function drop2(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            if (data.indexOf("vegetables") >= 0)
+                document.getElementById("vegetables").appendChild(document.getElementById(data));
+            else
+                alert("不是蔬菜");
+        }
+
+    </script>
+</head>
+<body>
+    <div class="div1">
+        <div class="div2">
+            <div class="div3">
+                <ul>
+                    <li><a href="E:\H5\1740624216罗文科\zhuyee.html"><img src="image/xiaowu.png" style="height:9px;"/>主页</a></li>
+                    <li><a href="#">动漫</a></li>
+                    <li><a href="#">英语</a></li>
+                    <li><a href="#">学习</a></li>
+                    <li><a href="#">作文</a></li>
+                </ul>
+            </div>
+            <div class="div4"><a href="E:\H5\1740624216罗文科\index.html">注册登录</a></div>
+        </div>
+    </div>
+    <div class="div5">
+        <div class="div6"><a href="#" target="_blank"><img src="image/erton.jpg" style="height:80px;width:250px;cursor:pointer"/></a>
+        <div class="div7">
+        <input type="text" class="search">
+        </div>
+        </div>
+    </div>
+    <div class="tubiao">
+        <a href="#" target="_blank"><div style="width:214px;height:120px;float:left;background:url(image/1.jpg)"><b>儿童动画片</b></div></a>
+        <a href="#" target="_blank"><div style="width:214px;height:120px;float:left;background:url(image/2.jpg)"><b>儿童歌曲</b></div></a>
+        <a href="#" target="_blank"><div style="width:214px;height:120px;float:left;background:url(image/8.jpg)"><b>儿童乐园</b></div></a>
+        <a href="#" target="_blank"><div style="width:214px;height:120px;float:left;background:url(image/4.jpg)"><b>儿童天地</b></div></a>
+        <a href="#" target="_blank"><div style="width:214px;height:120px;float:left;background:url(image/5.jpg)"><b>儿童英语</b></div></a>
+        <a href="#" target="_blank"><div style="width:214px;height:120px;float:left;background:url(image/6.jpg)"><b>儿童学习</b></div></a>
+        <a href="#" target="_blank"><div style="width:214px;height:120px;float:left;background:url(image/3.jpg)"><b>儿童玩具</b></div></a>
+        <a href="#" target="_blank"><div style="width:214px;height:120px;float:left;background:url(image/7.jpg)"><b>儿童文学</b></div></a>
+        </div>
+    <div class="zuowen">
+        <div class="xiaokuai">
+            <div class="news">
+                <div class="nes">最新儿童文学</div>
+            <div class="newss">更多>></div>
+        </div>
+            <div style="padding-left:16px;float:left;">
+            <ul>
+                <li>关于生气的歇后语</li>
+                <li>关于苦闷的歇后语</li>
+                <li>关于紧张的歇后语</li>
+                <li>关于空虚的歇后语</li>
+                <li>关于开心的歇后语</li>
+                <li>关于慌张的歇后语</li>
+                <li>关于忧郁的歇后语</li>
+                <li>关于悲伤的歇后语</li>
+            </ul>
+            </div>
+                        <div style="padding-right:16px;float:right;">
+                            <ul>
+                                <li>10-31</li>
+                                <li>10-31</li>
+                                <li>10-31</li>
+                                <li>10-31</li>
+                                <li>10-31</li>
+                                <li>10-31</li>
+                                <li>10-31</li>
+                                <li>10-31</li>
+                            </ul>
+                        </div>
+        </div>
+                <div class="wenxue">
+                    <div class="wen">
+                        <div class="wes">最新优秀作文</div>
+                        <div class="wenss">更多>></div>
+                    </div>
+                    <div style="padding-left:16px;float:left;">
+                        <ul>
+                            <li>我想成为勇敢的人</li>
+                            <li>那年的雪中最美的你</li>
+                            <li>我们的语文老师</li>
+                            <li>一名不知名的少先队员</li>
+                            <li>领居家的大姐姐</li>
+                            <li>我一个人回家的过程</li>
+                            <li>我的小学生活</li>
+                            <li>蚂蚁给我的启示</li>
+                        </ul>
+                    </div>
+                    <div style="padding-right:16px;float:right;">
+                        <ul>
+                            <li>11-1</li>
+                            <li>11-1</li>
+                            <li>11-1</li>
+                            <li>11-1</li>
+                            <li>11-1</li>
+                            <li>11-1</li>
+                            <li>11-1</li>
+                            <li>11-1</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clerarfix">
+        <div class="hhyx">
+            <div class="huihua">
+                <div class="huihu">
+                    <div class="huih">绘画天地</div>
+                    <div class="hui">更多>></div>
+                </div>
+                <div style="float:left;">
+                <canvas id="myCanvas" height=240 width=426 style="border: rgb(143, 197, 233) solid 1px">你的浏览器不支持canvas。</canvas>
+                <output id="showLineWidth">1</output>
+                <br />
+                <input type="range" id="lineWidth" min="1" max="50" step="1" value="1" onChange="doChangeRange()" />
+                <input type="color" id="lineColor" onChange="doChangeColor()" />
+                橡皮擦 :<img src="image/eraser.png" width="25" height="29" type="button" id="x" onclick="p()" />
+                </div>
+    </div>
+        <div class="youxi">
+            <div class="youx">
+                <div class="you">
+                    <div class="yo">游戏乐园</div>
+                    <div class="yoo">更多>></div>
+                </div>
+                <div style="float:left;">
+                    <div id="fruit" ondrop="drop1(event)" ondragover="allowDrop(event)"></div>
+                    <div id="vegetables" ondrop="drop2(event)" ondragover="allowDrop(event)"></div>
+                    <div style="border:1px solid rgb(143, 197, 233);width:426px;height:130px;float:left;clear:both;margin-top:10px;">
+                        <img src="image\11.png" style="width:60px;height:60px;" id="fruit1" draggable="ture" ondragstart="drag(event)">
+                        <img src="image\22.png" style="width:60px;height:60px;" id="vegetables1" draggable="ture" ondragstart="drag(event)">
+                        <img src="image\33.png" style="width:60px;height:60px;" id="vegetables2" draggable="ture" ondragstart="drag(event)">
+                        <img src="image\44.png" style="width:60px;height:60px;" id="fruit2" draggable="ture" ondragstart="drag(event)">
+                        <img src="image\55.png" style="width:60px;height:60px;" id="vegetables3" draggable="ture" ondragstart="drag(event)">
+                        <img src="image\66.png" style="width:60px;height:60px;" id="fruit3" draggable="ture" ondragstart="drag(event)">
+                        <img src="image\77.png" style="width:60px;height:60px;" id="vegetables4" draggable="ture" ondragstart="drag(event)">
+                        <img src="image\88.png" style="width:60px;height:60px;" id="fruit4" draggable="ture" ondragstart="drag(event)">
+                    </div>
+                   <br/>
+                   <p>游戏规则：</p>
+                   <p>&nbsp;&nbsp;请把上面图片中属于水果拖到左边浅黄色框内，把属于蔬菜拖到右边绿色框内</p>
+                </div>
+                </div>
+                </div>
+                <div style="height:300px;width:100px;"></div>
+</body>
+</html>

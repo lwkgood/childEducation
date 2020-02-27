@@ -1,0 +1,227 @@
+body,div,ul,li{
+    margin:0;
+    padding: 0;
+    font: 12px 微软雅黑;
+    color:#000;
+}
+body{
+    background: url(image/111111.jpg) no-repeat;
+    background-size: 100%;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+.div1 a:hover{
+    background-color:orange;
+        }
+.div3{
+    float: left;
+}
+.div4{                              
+    float: right;
+    height: 26px;
+    line-height: 26px;
+}
+.div1{
+    height: 26px;
+    background-color:antiquewhite;
+    border-top:3px solid orange;
+    border-bottom: 1px solid #aaa;
+}
+.div2,.div6{
+    width:970px;
+    margin:0 auto;
+    height: 26px;
+}
+.div3 ul li{
+    float: left;
+    height: 26px;
+    line-height: 26px;
+}
+
+.div3 ul li a{
+    display: inline-block;
+    height: 26px;
+    padding: 0 10px;
+}
+.div5{
+    height: 80px;
+    background-color:#fff;
+    border-bottom: 1px solid paleturquoise;
+}
+.div7{
+    float: right;
+    height: 80px;
+    line-height: 80px;
+}
+.search{
+    background:url("image/search.png") no-repeat right;
+    outline-style: none;
+    border: 1px solid #8D8989;
+    height: 20px;
+    
+}
+.search:focus{
+    background-color:palegoldenrod;
+}
+.tubiao,.zuowen,.hhyx{
+    width:856px;
+    margin:0 auto;
+    height: 100px;
+    
+}
+.xiaokuai{
+    width:428px;
+    height:240px;
+    background:#f2f7fd;
+    float:left;
+}
+.zuowen,.news{
+    height: 35px;
+    border-bottom: 1px solid palegreen;
+    line-height: 35px;
+    background-color: #e6edfb;
+}
+.news .nes{
+    float: left;
+    height: 35px;
+    line-height: 35px;
+    display: block;
+    padding-left:16px;
+    font-size: 13px;
+}
+.zuowen .newss{
+    float:right;
+    height: 35px;
+    line-height: 35px;
+    padding-right: 16px;
+    font-size: 13px;
+}
+.zuowen .xiaokuai ul li{
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+}
+.wenxue{
+    width:428px;
+    height:240px;
+    background:#f2f7fd;
+    float:right;
+}
+.zuowen,.wen{
+    height: 35px;
+    border-bottom: 1px solid palegreen;
+    line-height: 35px;
+    background-color: #e6edfb;
+}
+.wen .wes{
+    float:left;
+    display: block;
+    height: 35px;
+    line-height: 35px;
+    padding-left:16px;
+    font-size: 13px;
+}
+.zuowen .wenss{
+    float:right;
+    height: 35px;
+    line-height: 35px;
+    padding-right: 16px;
+    font-size: 13px;
+}
+.zuowen .wenxue ul li{
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+}
+
+
+.huihua{
+    width:428px;
+    height:240px;
+    background:#f2f7fd;
+    float:left;
+    border-top-left-radius:25px;
+    border-top-right-radius:25px;
+}
+.hhyx,.huihua{
+    height: 35px;
+    border-bottom: 1px solid palegreen;
+    line-height: 35px;
+    background-color:lightgray;
+}
+.huihu .huih{
+    float: left;
+    height: 35px;
+    line-height: 35px;
+    display: block;
+    padding-left:16px;
+    font-size: 13px;
+}
+.hhyx .hui{
+    float:right;
+    height: 35px;
+    line-height: 35px;
+    padding-right: 16px;
+    font-size: 13px;
+}
+
+.youx{
+    width:428px;
+    height:240px;
+    background:#f2f7fd;
+    float:left;
+    border-top-right-radius:25px;
+    border-top-left-radius:25px;
+}
+.youxi,.youx{
+    height: 35px;
+    border-bottom: 1px solid palegreen;
+    line-height: 35px;
+    background-color:lightgray;
+}
+.youx .yo{
+    float: left;
+    height: 35px;
+    line-height: 35px;
+    display: block;
+    padding-left:16px;
+    font-size: 13px;
+}
+.youxi .yoo{
+    float:right;
+    height: 35px;
+    line-height: 35px;
+    padding-right: 16px;
+    font-size: 13px;
+}
+
+
+.youxi .youx #fruit{
+        width:190px;
+        height: 100px;
+        float: left;
+        background-color:#f0edca;
+     }
+#vegetables{
+         width: 188px;
+         height: 100px;
+         float: left;
+         background-color:#b8eeee;
+         margin-left: 50px;
+     }
+     .clearfix::after{
+         content: ".";
+         display: block;
+         height: 0;
+         line-height: 0;
+         visibility: hidden
+         clear:left;
+     }
+     .clearfix{
+         zoom: 1;
+     }
